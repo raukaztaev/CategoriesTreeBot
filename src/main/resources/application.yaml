@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: CategoriesTreeBot
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: user
+    password: password
+
+telegram:
+  bot:
+      token: {TELEGRAM_BOT_TOKEN}
+      username: CategoriesBot
+      all_commands: |
+        /viewTree - See your categories tree
+        /addElement <element name> - Add root element
+        /addElement <parent element> <child element> - Add child element to existing element
+        /removeElement <element name> - Remove element and its child elements
+        /help - Show this message
